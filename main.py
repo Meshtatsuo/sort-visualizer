@@ -5,18 +5,28 @@ from tracemalloc import start
 from algorithms.bubble import *
 from algorithms.insertion import *
 
+def determinePlaybackSpeed(val):
+    if val == "slowest":
+        return .05
+    if val == "slow":
+        return .01
+    if val == "normal":
+        return .005
+    if val == "fast":
+        return .001
+    if val == "fastest":
+        return .0001
+    else:
+        return .005
+
+
 dataSize = int(sys.argv[2])
-playbackSpeed = .1
+playbackSpeed = determinePlaybackSpeed(sys.argv[3])
 sortType = str(sys.argv[1])
 sortType = sortType.lower()
 
 list= np.random.randint(0, 100, dataSize)
 x = np.arange(0,dataSize,1)
-
-def calculateAndDisplayTime():
-    elapsed = endTime - startTime
-    
-    return
 
 
 def beginSort():
@@ -35,7 +45,8 @@ def beginSort():
         return duration
     else:
         print("Please enter a valid sort algorithm, We currently support:")
-        print("- bubble")
+        print("- Bubble")
+        print("- Insertion")
         return
     
 
