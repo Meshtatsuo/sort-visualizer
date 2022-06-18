@@ -8,6 +8,7 @@ The sort-visualizer currently supports the following algorithms:
 
 <ul>
 <li>Bubble Sort</li>
+<li>Insertion Sort</li>
 </ul>
 
 With plans to introduce more down the road!
