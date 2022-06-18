@@ -1,6 +1,7 @@
 import sys
 
 from algorithms.bubble import *
+from algorithms.insertion import *
 
 dataSize = int(sys.argv[2])
 playbackSpeed = .001
@@ -16,6 +17,9 @@ print("Launching visualizer for sorting with type: ", sortType)
 # bubble sort
 if sortType == "bubble":
     bubbleSort(x,list, playbackSpeed)
+
+if sortType == "insertion":
+    insertionSort(x, list, playbackSpeed)
     
 else:
     print("Please enter a valid sort algorithm, We currently support:")
