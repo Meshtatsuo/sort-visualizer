@@ -4,6 +4,8 @@ from tracemalloc import start
 
 from algorithms.bubble import *
 from algorithms.insertion import *
+from algorithms.merge import *
+from algorithms.shell import *
 
 def determinePlaybackSpeed(val):
     if val == "slowest":
@@ -25,7 +27,10 @@ playbackSpeed = determinePlaybackSpeed(sys.argv[3])
 sortType = str(sys.argv[1])
 sortType = sortType.lower()
 
-list= np.random.randint(0, 100, dataSize)
+list= []
+for i in range(dataSize):
+    list.append(np.random.randint(0,100))
+    
 x = np.arange(0,dataSize,1)
 
 
@@ -43,6 +48,19 @@ def beginSort():
         endTime = time.time()
         duration = endTime - startTime
         return duration
+    if sortType == "merge":
+        startTime = time.time()
+        beginMergeSort(x, list, playbackSpeed)
+        endTime = time.time()
+        duration = endTime - startTime
+        return duration
+    if sortType == "shell":
+        startTime = time.time()
+        shellSort(x, list, playbackSpeed)
+        endTime = time.time()
+        duration = endTime - startTime
+        return duration
+
     else:
         print("Please enter a valid sort algorithm, We currently support:")
         print("- Bubble")

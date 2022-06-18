@@ -23,6 +23,16 @@ The visualizer takes in 2 command line arguments to determine sort type and data
 
 For example, if you wish to visualize a bubble sort with a dataset size of 50 and a high speed, you would launch the application using this syntax:
 
-`python main.py bubble 50 .0001`
+`python main.py bubble 50 fastest`
+
+The following speeds are available:
+
+<ul>
+    <li>Slowest
+    <li>Slow
+    <li>Normal
+    <li>Fast
+    <li>Fastest
+</ul>
 
 Note: sort type is not case sensitive!
