@@ -8,6 +8,7 @@ from algorithms.merge import *
 from algorithms.shell import *
 
 def determinePlaybackSpeed(val):
+    val = val.lower();
     if val == "slowest":
         return .05
     if val == "slow":

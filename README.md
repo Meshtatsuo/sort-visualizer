@@ -35,4 +35,4 @@ The following speeds are available:
     <li>Fastest
 </ul>
 
-Note: sort type is not case sensitive!
+Note: arguments are not case sensitive!
