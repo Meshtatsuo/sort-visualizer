@@ -32,7 +32,9 @@ list= []
 for i in range(dataSize):
     list.append(np.random.randint(0,100))
     
-x = np.arange(0,dataSize,1)
+x = []
+for i in range(dataSize):
+    x.append(i + 1)
 
 
 def beginSort():
